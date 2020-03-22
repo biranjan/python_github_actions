@@ -66,7 +66,7 @@ def merge_sort(my_iterable: Sequence) -> Sequence:
     return list(merge(left_list, right_list))
 
 
-def merge(lef_half: Sequence, right_half: Sequence) -> list:
+def merge(left_half: Sequence, right_half: Sequence) -> list:
     """
     Merge: merges and sorts the two half of a list
     args:
@@ -76,15 +76,15 @@ def merge(lef_half: Sequence, right_half: Sequence) -> list:
         res: merged and sorted list of left & right half
     """
     res = []
-    while len(lef_half) != 0 and len(right_half) != 0:
-        if lef_half[0] < right_half[0]:
-            res.append(right_half[0])
-            lef_half.remove(lef_half[0])
+    while len(left_half) != 0 and len(right_half) != 0:
+        if left_half[0] < right_half[0]:
+            res.append(left_half[0])
+            left_half.remove(left_half[0])
         else:
             res.append(right_half[0])
             right_half.remove(right_half[0])
-    if len(lef_half) == 0:
+    if len(left_half) == 0:
         res = res + right_half
     else:
-        res = res + lef_half
+        res = res + left_half
     return res
