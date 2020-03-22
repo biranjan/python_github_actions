@@ -23,4 +23,3 @@ def test_insert_sort(xs):
         xs.sort()
         assert sorted_list[0] == xs[0]
         assert sorted_list[-1] == xs[-1]
-
