@@ -1,7 +1,7 @@
 import pytest
 from hypothesis import given
 import hypothesis.strategies as st
-from sort_algo import bubble_sort, insert_sort
+from sort_algo import bubble_sort, insert_sort, merge_sort
 
 
 @given(st.lists(st.integers()))
@@ -20,6 +20,16 @@ def test_insert_sort(xs):
     print(xs)
     if len(xs) >= 2:
         sorted_list = insert_sort(xs)
+        xs.sort()
+        assert sorted_list[0] == xs[0]
+        assert sorted_list[-1] == xs[-1]
+
+
+@given(st.lists(st.integers()))
+def test_merge_sort(xs):
+    print(xs)
+    if len(xs) >= 2:
+        sorted_list = merge_sort(xs)
         xs.sort()
         assert sorted_list[0] == xs[0]
         assert sorted_list[-1] == xs[-1]
