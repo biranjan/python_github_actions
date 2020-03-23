@@ -13,6 +13,7 @@ jobs:
         run: |
           pip3 install pytest
           pip3 install pytest-cov
+          pip3 install hypothesis
           python3 -m pytest --cov=./ --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
