@@ -32,7 +32,7 @@ parso==0.5.1
 plotly==4.1.0
 pluggy==0.13.1
 psycopg2-binary==2.8.4
-py==1.8.1
+py==1.10.0
 py4j==0.10.7
 pylint==2.4.4
 pyparsing==2.4.6
