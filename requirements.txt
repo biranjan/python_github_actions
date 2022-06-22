@@ -25,7 +25,7 @@ mccabe==0.6.1
 more-itertools==8.2.0
 nox==2019.11.9
 numexpr==2.7.0
-numpy==1.17.0
+numpy==1.22.0
 packaging==20.3
 pandas==0.25.3
 parso==0.5.1
